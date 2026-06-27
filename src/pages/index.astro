@@ -1,0 +1,389 @@
+---
+// Landing Page for Pulsar OS (Aligned with Star Labs/Novacustom visual style)
+// Página de Aterrizaje General de Pulsar OS (Alineada con el estilo visual de Star Labs/Novacustom)
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="The True Replacement for Mac and Windows">
+    <!-- Hero Section (2-column layout, pill buttons, large rounded image placeholder) -->
+    <!-- Sección Hero (Layout de 2 columnas, botones píldora, marcador de imagen grande) -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-grid">
+            <!-- Left Column: Copy & Actions / Columna Izquierda: Texto y Acciones -->
+            <div class="hero-left">
+                <h1 class="hero-title">
+                    The perfect replacement for Mac and Windows.
+                </h1>
+                <p class="hero-desc">
+                    Linux based operative systems designed to replicate the
+                    MacOS and Windows experience. Truly open-source and
+                    community driven. Elegant, stable and auditable.
+                    <!-- Un sistema operativo elegante, completamente auditable y comunitario diseñado para clonar el flujo de tu entorno preferido con cero telemetría y libertad total. -->
+                </p>
+                <div class="hero-actions">
+                    <a
+                        href="https://github.com/Inled-Pulsar-OS"
+                        class="btn btn-primary"
+                    >
+                        View on Github
+                        <svg
+                            class="btn-arrow"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a
+                        href="https://github.com/orgs/Inled-Pulsar-OS/projects/1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary"
+                    >
+                        Explore Project Roadmap
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Visual Showcase Placeholder / Columna Derecha: Marcador de Exhibición Visual -->
+            <div class="hero-right">
+                <div class="image-placeholder main-showcase-placeholder">
+                    <img src="penpineapple-meme-juntar-macos-windows.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Features Row (4 clean cards in a horizontal row on desktop, inspired by reference image) -->
+    <!-- Fila de Características del Hero (4 tarjetas limpias en una fila horizontal en escritorio, inspiradas en la referencia) -->
+    <section class="hero-features-section">
+        <div class="container hero-features-grid">
+            <!-- Feature Card 1 -->
+            <div class="feature-card">
+                <h3 class="feature-title">
+                    Macos, Windows and Android integration
+                </h3>
+                <p class="feature-desc">
+                    With Pulsar, you can use the apps of your Android phone as
+                    desktop apps, you can run a fully MacOS desktop from
+                    official servers and execute Windows apps as native apps
+                    WITHOUT WINE, WITH REAL WINDOWS.
+                    <!-- Diseñado sobre bases de Linux modernas, no adaptado a posteriori. Estable, seguro y listo para el día a día. -->
+                </p>
+            </div>
+
+            <!-- Feature Card 2 -->
+            <div class="feature-card">
+                <h3 class="feature-title">100% Usable</h3>
+                <p class="feature-desc">
+                    Unlike other distributions that try to replicate the look
+                    and feel, Pulsar OS is 100% functional in both of its
+                    flavors. You'll have the same experience as in a normal
+                    Linux environment.
+                    <!-- Un entorno de escritorio completamente funcional y estable configurado de fábrica para trabajar y jugar. -->
+                </p>
+            </div>
+
+            <!-- Feature Card 3 -->
+            <div class="feature-card">
+                <h3 class="feature-title">Rock-solid base</h3>
+                <p class="feature-desc">
+                    Unlike other customized distributions, we are not based on
+                    Ubuntu or Arch. Pulsar OS is based on the mother of them
+                    all: Debian.
+                    <!-- Construido usando los repositorios de Debian Trixie. Misma estabilidad y paquetes del sistema core. -->
+                </p>
+            </div>
+
+            <!-- Feature Card 4 -->
+            <div class="feature-card">
+                <h3 class="feature-title">Fully Auditable</h3>
+                <p class="feature-desc">
+                    Everything is built on GitHub Actions, whose workflow and
+                    source code are auditable. We are the first Linux
+                    distribution that is 100% replicable from source code.
+                    <!-- Sin telemetría oculta ni restricciones de licencia. Verifica el código, audita y compila componentes. -->
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flavours Section (Clean description cards, no feature lists, clean image placeholders) -->
+    <!-- Sección de Sabores (Tarjetas descriptivas limpias, sin listas de características, marcadores de imagen) -->
+    <section id="flavours" class="flavours-section">
+        <div class="container">
+            <h2 class="section-title">Designed for Your Workflow</h2>
+            <p class="section-subtitle">
+                Pulsar OS is distributed in two target desktop configurations
+                tailored to mimic macOS and Windows.
+                <!-- Pulsar OS se ofrece en dos configuraciones de escritorio adaptadas para imitar macOS y Windows. -->
+            </p>
+
+            <!-- Pear Flavour -->
+            <div class="flavour-row">
+                <div class="flavour-info">
+                    <h3 class="flavour-title">Pear</h3>
+                    <p class="flavour-desc">
+                        It perfectly replicates the aesthetics of MacOS, even
+                        improving usability.
+                        <!-- Replica la estética pulida, barra superior, dock de aplicaciones y flujo Unix de macOS. Perfecto para la elegancia visual y desarrollo. -->
+                    </p>
+                </div>
+                <div class="flavour-media">
+                    <div class="image-placeholder">
+                        <img src="demopear1.png" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wintux Flavour (Inverted Row) -->
+            <div class="flavour-row inverted">
+                <div class="flavour-info">
+                    <h3 class="flavour-title">Wintux</h3>
+                    <p class="flavour-desc">
+                        Forget it, you don't need Winux or Ubuntu, you need
+                        something auditable and just like the Windows you love.
+                        <!-- Conserva el menú de inicio centrado, barra de tareas y atajos de teclado estándar de Windows. El puente de migración ideal. -->
+                    </p>
+                </div>
+                <div class="flavour-media">
+                    <div class="image-placeholder">
+                        <svg
+                            class="image-placeholder-icon"
+                            width="40"
+                            height="40"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <rect
+                                x="2"
+                                y="3"
+                                width="20"
+                                height="14"
+                                rx="2"
+                                ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <div class="image-placeholder-title">Coming soon</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pulsar Integrations Section (Macboat, Winboat, Droidtux) -->
+    <!-- Sección de Integraciones de Pulsar (Macboat, Winboat, Droidtux) -->
+    <section id="integrations" class="integrations-section">
+        <div class="container">
+            <h2 class="section-title">Seamless Integrations</h2>
+            <p class="section-subtitle">
+                Access your other environments directly from Pulsar OS with
+                native system integrations.
+                <!-- Accede a tus otros entornos directamente desde Pulsar OS con integraciones nativas de sistema. -->
+            </p>
+
+            <div class="integrations-grid">
+                <!-- Macboat Integration -->
+                <div class="integration-card">
+                    <img
+                        src="https://hosted.inled.es/macboat.png"
+                        alt="Macboat Logo"
+                        class="integration-logo"
+                    />
+                    <h3 class="integration-title">Macboat</h3>
+                    <p class="integration-desc">
+                        Run a fully featured macOS desktop environment directly
+                        from official servers. Enjoy perfect Visual alignment
+                        and software compatibility.
+                        <!-- Ejecuta un escritorio macOS completo desde servidores oficiales. Compatibilidad visual y de software perfecta. -->
+                    </p>
+                </div>
+
+                <!-- Winboat Integration -->
+                <div class="integration-card">
+                    <img
+                        src="https://hosted.inled.es/winboat_logo.NqN8dmd9.svg"
+                        alt="Winboat Logo"
+                        class="integration-logo"
+                    />
+                    <span class="integration-meta">Third Party</span>
+                    <h3 class="integration-title">Winboat</h3>
+                    <p class="integration-desc">
+                        Execute native Windows applications directly on Pulsar
+                        OS. Runs on top of a real Windows instance for absolute
+                        compatibility without WINE bottlenecks.
+                        <!-- Ejecuta aplicaciones nativas de Windows directamente en Pulsar OS sobre una instancia de Windows real sin cuellos de botella de WINE. -->
+                    </p>
+                </div>
+
+                <!-- Droidtux Integration -->
+                <div class="integration-card">
+                    <img
+                        src="https://hosted.inled.es/droidtux.png"
+                        alt="Droidtux Logo"
+                        class="integration-logo"
+                    />
+                    <h3 class="integration-title">Droidtux</h3>
+                    <p class="integration-desc">
+                        Run the applications of your Android phone as floating
+                        desktop windows. The apps remain executed on your phone
+                        rather than your PC, ensuring maximum portability.
+                        <!-- Ejecuta aplicaciones de tu teléfono Android en ventanas de escritorio. Las apps se ejecutan en tu teléfono para mayor portabilidad. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adapted Core Features (Browser to settings customized to look identical) -->
+    <!-- Características del Core Adaptadas (Desde el navegador hasta los ajustes personalizados para ser idénticos) -->
+    <section id="features" class="core-features-section">
+        <div class="container">
+            <h2 class="section-title">
+                We don't remake the wheel, but we tune it up.
+            </h2>
+            <p class="section-subtitle">
+                From a modified settings app (because we know what's important),
+                to our own Firefox-based browser
+                <!-- Personalizamos los paneles del sistema, la shell, los menús de ajustes y navegadores para asegurar 100% fidelidad. -->
+            </p>
+        </div>
+    </section>
+
+    <!-- Project Progress Diagram (Draw.io HTML Embed) -->
+    <!-- Sección Gráfico Draw.io (Carga el archivo real pulsaros-state.drawio.html de public) -->
+    <section id="status" class="drawio-section">
+        <div class="container">
+            <h2 class="section-title">Development Roadmap</h2>
+            <p class="section-subtitle">
+                Track the progress of Pulsar OS components. Below is the
+                interactive roadmap exported directly from Draw.io.
+                <!-- Sigue de cerca el estado de desarrollo de Pulsar OS. Abajo se muestra el progreso interactivo exportado de Draw.io. -->
+            </p>
+
+            <div class="drawio-viewport">
+                <!-- Renders the actual Draw.io HTML file stored in public folder / Renderiza el HTML real de Draw.io en la carpeta public -->
+                <iframe
+                    id="drawio-iframe"
+                    src="/pulsaros-state.drawio.html"
+                    title="Pulsar OS Draw.io Progress Map"
+                    class="drawio-iframe-embed"
+                    loading="lazy"
+                >
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Origin Section (Spain, Europe) -->
+    <!-- Sección de Origen (España, Europa) -->
+    <section class="origin-section">
+        <div class="container origin-container">
+            <h2 class="origin-title">Made in Spain, Europe</h2>
+            <p class="origin-subtitle">Hecho en España, Europa</p>
+            <div class="origin-flags">
+                <img
+                    src="https://flagcdn.com/es.svg"
+                    alt="Spain Flag"
+                    class="flag-img"
+                    loading="lazy"
+                />
+                <img
+                    src="https://flagcdn.com/eu.svg"
+                    alt="Europe Flag"
+                    class="flag-img"
+                    loading="lazy"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Downloads Section (Seeking geeky & open-minded people, Github link, Discord soon) -->
+    <!-- Sección de Comunidad y Descargas (Buscando gente innovadora, friki y con mente abierta, Discord próximamente) -->
+    <section id="community" class="community-section">
+        <div class="container community-container">
+            <div class="community-card">
+                <span class="discord-tag"
+                    >Community Discord Server — Coming Soon!</span
+                >
+                <h2 class="community-title">
+                    Join us and let's create Pulsar OS together
+                </h2>
+                <p class="community-desc">
+                    We are actively looking for people eager to build new
+                    things, push technological boundaries, geek out, and keep an
+                    open mind. If you are passionate about open source and want
+                    to contribute to Pulsar OS, join us. Currently not as paid
+                    work, but as open source collaboration
+                    <!-- Buscamos personas con ganas de crear cosas nuevas, innovar, frikis y con mente abierta. Construyamos juntos el reemplazo perfecto. -->
+                </p>
+                <div class="community-actions">
+                    <a
+                        href="https://github.com/Inled-Pulsar-OS"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary"
+                    >
+                        Visit GitHub Organization
+                    </a>
+                    <a
+                        href="https://inled.es/contacto/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary"
+                    >
+                        Get in touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script is:inline>
+        // Handle theme handshake requests from Draw.io page / Responder al tema del iframe
+        window.addEventListener("message", (event) => {
+            if (event.data && event.data.type === "requestTheme") {
+                const iframe = document.getElementById("drawio-iframe");
+                if (iframe && iframe.contentWindow) {
+                    const isDark =
+                        document.documentElement.classList.contains("dark");
+                    iframe.contentWindow.postMessage(
+                        { theme: isDark ? "dark" : "light" },
+                        "*",
+                    );
+                }
+            }
+        });
+
+        // Notify Draw.io iframe when parent theme toggles / Notificar al iframe de Draw.io si cambia el tema del padre
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === "class") {
+                    const iframe = document.getElementById("drawio-iframe");
+                    if (iframe && iframe.contentWindow) {
+                        const isDark =
+                            document.documentElement.classList.contains("dark");
+                        iframe.contentWindow.postMessage(
+                            { theme: isDark ? "dark" : "light" },
+                            "*",
+                        );
+                    }
+                }
+            });
+        });
+
+        observer.observe(document.documentElement, { attributes: true });
+    </script>
+</Layout>
