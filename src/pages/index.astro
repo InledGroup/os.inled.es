@@ -155,27 +155,10 @@ import Layout from "../layouts/Layout.astro";
                 </div>
                 <div class="flavour-media">
                     <div class="image-placeholder">
-                        <svg
+                        <img
+                            src="https://hosted.inled.es/pulsar-win11-nobg.png"
                             class="image-placeholder-icon"
-                            width="40"
-                            height="40"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <rect
-                                x="2"
-                                y="3"
-                                width="20"
-                                height="14"
-                                rx="2"
-                                ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
+                        />
                         <div class="image-placeholder-title">Coming soon</div>
                     </div>
                 </div>
@@ -243,147 +226,125 @@ import Layout from "../layouts/Layout.astro";
                         <!-- Ejecuta aplicaciones de tu teléfono Android en ventanas de escritorio. Las apps se ejecutan en tu teléfono para mayor portabilidad. -->
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Adapted Core Features (Browser to settings customized to look identical) -->
-    <!-- Características del Core Adaptadas (Desde el navegador hasta los ajustes personalizados para ser idénticos) -->
-    <section id="features" class="core-features-section">
-        <div class="container">
-            <h2 class="section-title">
-                We don't remake the wheel, but we tune it up.
-            </h2>
-            <p class="section-subtitle">
-                From a modified settings app (because we know what's important),
-                to our own Firefox-based browser
-                <!-- Personalizamos los paneles del sistema, la shell, los menús de ajustes y navegadores para asegurar 100% fidelidad. -->
-            </p>
-        </div>
-    </section>
-
-    <!-- Project Progress Diagram (Draw.io HTML Embed) -->
-    <!-- Sección Gráfico Draw.io (Carga el archivo real pulsaros-state.drawio.html de public) -->
-    <section id="status" class="drawio-section">
-        <div class="container">
-            <h2 class="section-title">Development Roadmap</h2>
-            <p class="section-subtitle">
-                Track the progress of Pulsar OS components. Below is the
-                interactive roadmap exported directly from Draw.io.
-                <!-- Sigue de cerca el estado de desarrollo de Pulsar OS. Abajo se muestra el progreso interactivo exportado de Draw.io. -->
-            </p>
-
-            <div class="drawio-viewport">
-                <!-- Renders the actual Draw.io HTML file stored in public folder / Renderiza el HTML real de Draw.io en la carpeta public -->
-                <iframe
-                    id="drawio-iframe"
-                    src="/pulsaros-state.drawio.html"
-                    title="Pulsar OS Draw.io Progress Map"
-                    class="drawio-iframe-embed"
-                    loading="lazy"
-                >
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Origin Section (Spain, Europe) -->
-    <!-- Sección de Origen (España, Europa) -->
-    <section class="origin-section">
-        <div class="container origin-container">
-            <h2 class="origin-title">Made in Spain, Europe</h2>
-            <p class="origin-subtitle">Hecho en España, Europa</p>
-            <div class="origin-flags">
-                <img
-                    src="https://flagcdn.com/es.svg"
-                    alt="Spain Flag"
-                    class="flag-img"
-                    loading="lazy"
-                />
-                <img
-                    src="https://flagcdn.com/eu.svg"
-                    alt="Europe Flag"
-                    class="flag-img"
-                    loading="lazy"
-                />
-            </div>
-        </div>
-    </section>
-
-    <!-- Community & Downloads Section (Seeking geeky & open-minded people, Github link, Discord soon) -->
-    <!-- Sección de Comunidad y Descargas (Buscando gente innovadora, friki y con mente abierta, Discord próximamente) -->
-    <section id="community" class="community-section">
-        <div class="container community-container">
-            <div class="community-card">
-                <span class="discord-tag"
-                    >Community Discord Server — Coming Soon!</span
-                >
-                <h2 class="community-title">
-                    Join us and let's create Pulsar OS together
-                </h2>
-                <p class="community-desc">
-                    We are actively looking for people eager to build new
-                    things, push technological boundaries, geek out, and keep an
-                    open mind. If you are passionate about open source and want
-                    to contribute to Pulsar OS, join us. Currently not as paid
-                    work, but as open source collaboration
-                    <!-- Buscamos personas con ganas de crear cosas nuevas, innovar, frikis y con mente abierta. Construyamos juntos el reemplazo perfecto. -->
-                </p>
-                <div class="community-actions">
-                    <a
-                        href="https://github.com/Inled-Pulsar-OS"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-primary"
-                    >
-                        Visit GitHub Organization
-                    </a>
-                    <a
-                        href="https://inled.es/contacto/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-secondary"
-                    >
-                        Get in touch
-                    </a>
+                <!-- GSConnect Integration -->
+                <div class="integration-card">
+                    <img
+                        src="https://hosted.inled.es/gsconnect.png"
+                        alt="GSConnect Logo"
+                        class="integration-logo"
+                    />
+                    <h3 class="integration-title">GSConnect</h3>
+                    <p class="integration-desc">
+                        Seamlessly integrate your Android phone with Pulsar OS.
+                        Receive notifications, send and receive messages, share
+                        files, and control your phone from your desktop.
+                        <!-- Integra tu teléfono Android con Pulsar OS. Notificaciones, mensajes, archivos y control desde el escritorio. -->
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <script is:inline>
-        // Handle theme handshake requests from Draw.io page / Responder al tema del iframe
-        window.addEventListener("message", (event) => {
-            if (event.data && event.data.type === "requestTheme") {
-                const iframe = document.getElementById("drawio-iframe");
-                if (iframe && iframe.contentWindow) {
-                    const isDark =
-                        document.documentElement.classList.contains("dark");
-                    iframe.contentWindow.postMessage(
-                        { theme: isDark ? "dark" : "light" },
-                        "*",
-                    );
-                }
-            }
-        });
+    <!-- Enterprise, Individual & Institution Section -->
+    <!-- Sección para Empresas, Particulares e Instituciones -->
+    <section id="enterprise" class="enterprise-section">
+        <div class="container">
+            <h2 class="section-title">
+                Perfect for companies, individuals and institutions
+            </h2>
+            <p class="section-subtitle">
+                Pulsar OS is designed to fit any environment — professional,
+                personal or institutional. Transparency, sovereignty and
+                familiarity in a single system.
+            </p>
 
-        // Notify Draw.io iframe when parent theme toggles / Notificar al iframe de Draw.io si cambia el tema del padre
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.attributeName === "class") {
-                    const iframe = document.getElementById("drawio-iframe");
-                    if (iframe && iframe.contentWindow) {
-                        const isDark =
-                            document.documentElement.classList.contains("dark");
-                        iframe.contentWindow.postMessage(
-                            { theme: isDark ? "dark" : "light" },
-                            "*",
-                        );
-                    }
-                }
-            });
-        });
+            <div class="enterprise-features-grid">
+                <div class="enterprise-card">
+                    <h3 class="enterprise-card-title">100% auditable code</h3>
+                    <p class="enterprise-card-desc">
+                        One of the few distributions with fully auditable source
+                        code. Everything is built on GitHub Actions and every
+                        line can be verified.
+                    </p>
+                </div>
 
-        observer.observe(document.documentElement, { attributes: true });
-    </script>
+                <div class="enterprise-card">
+                    <h3 class="enterprise-card-title">
+                        Sovereign and European
+                    </h3>
+                    <p class="enterprise-card-desc">
+                        Developed entirely in Europe, with no dependency on
+                        foreign big-tech technologies or services. Real digital
+                        sovereignty.
+                    </p>
+                </div>
+
+                <div class="enterprise-card">
+                    <h3 class="enterprise-card-title">Community-driven</h3>
+                    <p class="enterprise-card-desc">
+                        Built by and for the community. Decisions are made
+                        openly and transparently, with no hidden corporate
+                        interests.
+                    </p>
+                </div>
+
+                <div class="enterprise-card">
+                    <h3 class="enterprise-card-title">Familiar for everyone</h3>
+                    <p class="enterprise-card-desc">
+                        Perfectly replicates the designs of mainstream operating
+                        systems. Both individual users and company employees
+                        will feel right at home.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Stage Notice -->
+    <section class="notice-section">
+        <div class="container notice-container">
+            <div class="notice-card">
+                <span class="notice-icon">&#9432;</span>
+                <div class="notice-content">
+                    <h3 class="notice-title">Early stage project</h3>
+                    <p class="notice-desc">
+                        Pulsar OS is in its early stages. We don't have a
+                        release yet or official communication channels, but you
+                        can already follow the project, open issues, and submit
+                        pull requests on GitHub. A wiki is still to be built —
+                        contributions are welcome!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Contribute Section -->
+    <!-- Sección de Comunidad y Contribución -->
+    <section id="community" class="community-section">
+        <div class="container community-container">
+            <div class="community-card">
+                <h2 class="community-title">Contribute to Pulsar OS</h2>
+                <p class="community-desc">
+                    Pulsar OS is an open source project and all help is welcome.
+                    Whether you're a developer, designer, translator or just an
+                    enthusiast, there are many ways to contribute.
+                </p>
+                <div class="community-actions">
+                    <a href="/contribute" class="btn btn-primary">
+                        See how to contribute
+                    </a>
+                    <a
+                        href="https://github.com/Inled-Pulsar-OS"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary"
+                    >
+                        GitHub Organization
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </Layout>
